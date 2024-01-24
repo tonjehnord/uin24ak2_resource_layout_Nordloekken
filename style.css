@@ -12,4 +12,33 @@
 body {
     background-color: var(--lightgrey);
     font-family: var(--font);
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap; 
+    list-style-type: none;
+    gap: 1rem;
+    max-width: 1200px;
+}
+nav button {
+    background-color: var(--darkblue);
+    padding: 1.5rem 4rem;
+    color: var(--white);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 850px;
+    background-color: var(--white);
+    padding: 5rem;
 }
