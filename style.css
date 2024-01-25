@@ -38,6 +38,14 @@ nav button {
     cursor: pointer;
     font-size: medium;
 }
+nav button:hover {
+    background-color: var(--white);
+    color: var(--darkblue);
+}
+.active {
+    background-color: var(--white);
+    color: var(--darkblue);
+}
 
 main {
     display: flex;

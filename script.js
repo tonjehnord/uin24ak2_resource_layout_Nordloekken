@@ -1,10 +1,10 @@
-function toggleButton(articleId) {
-
+function toggleButton(articleId) { 
+   
     let resourcesHTML = ""
-
+        
     resources.map(resource => {
         if (resource.category === articleId) {
-            resourcesHTML += `<article class="hidden" id="${resource.category}">
+            resourcesHTML += `<article id="${resource.category}">
             <h2>${resource.category}</h2>
             <p>${resource.text}</p>
             <ul>${resource.sources.map(source => 
@@ -16,6 +16,16 @@ function toggleButton(articleId) {
 
     const main = document.getElementsByTagName("main")
     main[0].innerHTML =  resourcesHTML
-}
+} 
 
 toggleButton(`HTML`)
+
+
+const buttons = document.querySelectorAll("#buttons button")
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        buttons.forEach(btn => btn.classList.remove("active"))
+        button.classList.add("active")
+    })
+}) 
